@@ -17,11 +17,11 @@
 }
 
 body {
+  width: 100%;
+
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ background-color: rgb(22, 21, 59);
+}
+body::-webkit-scrollbar{
+  width: 0;
 }
