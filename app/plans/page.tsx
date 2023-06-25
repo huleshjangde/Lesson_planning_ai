@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaWhatsapp } from 'react-icons/fa';
+
 
 const FormComponent = () => {
   const [grade, setGrade] = useState('');
@@ -70,6 +72,18 @@ const FormComponent = () => {
       });
 
   };
+
+  const handleShareWhatsApp = () => {
+    // Construct the message to be shared
+    const message = `Check out this lesson plan: ${result}`;
+  
+    // Construct the WhatsApp share URL
+    const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+  
+    // Open the share URL in a new tab
+    window.open(url, '_blank');
+  };
+  
 
   const handleCopyText = () => {
     const textArea = document.createElement('textarea');
@@ -180,16 +194,28 @@ const FormComponent = () => {
             >
               <ToastContainer />
               <div className='flex  flex-col-reverse md:justify-between md:flex-row-reverse  md:items-center px-8 rounded-lg'>
+              <div className='flex justify-center gap-3 items-center tracking-wide' style={{ fontFamily:'sans-serif'}}>
+
               <button
-            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 text-sm md:text-base rounded mt-4 focus:outline-none focus:shadow-outline'
+            className='bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-2 text-sm md:text-base rounded focus:outline-none focus:shadow-outline'
             onClick={handleCopyText}
           >
             Copy Text
-          </button> 
-  <h1 className='text-2xl font-bold uppercase' style={{fontFamily:'Roboto'}}>Topic: {resultTopic} </h1>
+          </button>  <button
+  className='bg-green-500 text-base hover:bg-green-700 h-fit text-white font-semibold  flex justify-center items-center p-2 rounded focus:outline-none focus:shadow-outline'
+  onClick={handleShareWhatsApp}
+>
+  <FaWhatsapp className='mr-2 ' />
+  Share
+</button>
+</div>
+
+  <h1 className=' text-xl text-center md:text-2xl font-bold uppercase' style={{fontFamily:'Roboto'}}>Topic: {resultTopic} </h1>
                 </div>
 
               {result}
+              
+
             </pre>
           )}
          
