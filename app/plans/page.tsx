@@ -193,7 +193,7 @@ const FormComponent = () => {
               style={{ wordBreak: 'break-word' , fontFamily:'Roboto'}}
             >
               <ToastContainer />
-              <div className='flex  flex-col-reverse md:justify-between md:flex-row-reverse  md:items-center px-8 rounded-lg'>
+              <div className='flex  flex-col-reverse md:justify-between md:flex-row-reverse  md:items-center px-8 rounded-lg my-1'>
               <div className='flex justify-center gap-3 items-center tracking-wide' style={{ fontFamily:'sans-serif'}}>
 
               <button
