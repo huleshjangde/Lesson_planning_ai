@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 const FormComponent = () => {
   const [grade, setGrade] = useState('');
@@ -32,7 +33,7 @@ const FormComponent = () => {
     // Handle form submission here
   
     setResultTopic(topic)
-    fetch("http://localhost:3030/chat", {
+    fetch("https://lesson-planing-server.onrender.com/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -158,7 +159,13 @@ const FormComponent = () => {
 
 <div className=' text-slate-100 w-full flex flex-col items-center'>
   {isLoading ? ( // Display loading status while isLoading is true
-            <img src="https://i.pinimg.com/originals/62/26/43/6226435516042edfe1a4514a44e2023a.gif"  className='w-96 h-auto mix-blend-screen' alt="" />
+  <Image
+  src="https://i.pinimg.com/originals/62/26/43/6226435516042edfe1a4514a44e2023a.gif"
+  alt="Picture of the author"
+  className=' mix-blend-screen'
+  width={350}
+  height={350}
+/>
           ) : (
             <pre
               className='w-full lg:w-5/6 px-8 py-3 overflow-ellipsis whitespace-pre-wrap bg-slate-800 mt-5 rounded-lg text-xl'
