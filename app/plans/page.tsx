@@ -93,7 +93,7 @@ const FormComponent = () => {
         onChange={handleGradeChange}
         className="w-5/6 md:w-full border border-gray-300 bg-slate-100 rounded px-3 py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       >
-        <option value="">Select Grade</option>
+        <option value="" >Select Grade</option>
         <option value="1-5">1-5</option>
         <option value="6-10">6-10</option>
         <option value="11-12">11-12</option>
@@ -129,6 +129,7 @@ const FormComponent = () => {
         type="text"
         id="topic"
         value={topic}
+        placeholder='Enter topic for the choosen subject'
         onChange={handleTopicChange}
         className="w-full border border-gray-300 bg-slate-100 rounded px-3 py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       />
@@ -143,6 +144,7 @@ const FormComponent = () => {
         onChange={handleVerbChange}
         className="w-full border border-gray-300 bg-slate-100 rounded px-3 py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       >
+      
        <option value="">Select Verb</option>
   <option value="Learn">Learn</option>
   <option value="Explore">Explore</option>
