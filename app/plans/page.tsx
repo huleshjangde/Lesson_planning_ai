@@ -11,23 +11,23 @@ const FormComponent = () => {
   const [result,setresult] = useState("")
   const [resultTopic,setResultTopic] = useState("")
   const [isLoading, setIsLoading] = useState(false);
-  const handleGradeChange = (e) => {
+  const handleGradeChange = (e: any) => {
     setGrade(e.target.value);
   };
 
-  const handleSubjectChange = (e) => {
+  const handleSubjectChange = (e: any) => {
     setSubject(e.target.value);
   };
 
-  const handleTopicChange = (e) => {
+  const handleTopicChange = (e:any) => {
     setTopic(e.target.value);
   };
 
-  const handleVerbChange = (e) => {
+  const handleVerbChange = (e: any) => {
     setVerb(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     setIsLoading(true);
     // Handle form submission here
