@@ -74,7 +74,7 @@ const FormComponent = () => {
   return (
     <>
     <div className=' flex flex-col justify-center items-center gap-8 py-10 bg-opacity-80 w-screen '>
-      <h1 className='text-2xl lg:text-4xl font-bold uppercase ' >Lesson Planning Assistant</h1>
+      <h1 className='text-2xl lg:text-4xl font-bold uppercase text-slate-100 ' >Lesson Planning Assistant</h1>
 
     <form onSubmit={handleSubmit} className=" w-4/5 h-full md:w-4/5 mx-auto bg-slate-300 shadow-md rounded px-8 pt-6 pb-8 ">
     <div className=" text-base">
