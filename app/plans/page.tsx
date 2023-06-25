@@ -32,6 +32,12 @@ const FormComponent = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    if (!topic || !grade || !subject || !verb) {
+      toast.error('Please fill in all the required fields', {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+      return;
+    }
     setIsLoading(true);
     // Handle form submission here
   
